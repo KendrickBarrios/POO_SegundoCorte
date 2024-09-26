@@ -18,16 +18,22 @@ public class Main {
         listEst.create(student2);
         listEst.create(student3);
 
-        System.out.println("Showing students list");
+        System.out.println("\nShowing students list");
         for (Student student: listEst.showList()) {
             System.out.println(student);
         }
 
-        System.out.println("Add another student");
+        System.out.println("\nAdd another student");
         Student oscar = new Student("23000100", "Oscar Gabriel", "Calero Vega", "ogcalero@uamv.edu.ni", "44444444");
         listEst.create(oscar);
         
-        System.out.println("Showing updated list");
+        System.out.println("\nShowing updated list");
+        for (Student student: listEst.showList()) {
+            System.out.println(student);
+        }
+
+        System.out.println("\nDeleting first student from the list");
+        listEst.delete("18020069");
         for (Student student: listEst.showList()) {
             System.out.println(student);
         }
